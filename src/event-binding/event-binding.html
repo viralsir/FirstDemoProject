@@ -1,0 +1,28 @@
+<p>event-binding works!</p>
+
+<input type="text" placeholder="enter your name" #nameinput>
+<input type="button" value="greet" (click)="greetmessage(nameinput)">
+<h1>{{message}}</h1>
+<hr/>
+
+Roll No: <input type="number" #rollno><br/>
+Name : <input type="text" #name><br/>
+Maths : <input type="number" #maths><br>
+Science : <input type="number" #science><br/>
+<input type="button" value="save" (click)="save(rollno,name,maths,science)">
+<br/>
+
+Roll No: {{this.rollno}} <br/>
+Name : {{this.name}} <br/>
+Maths : {{this.maths}} <br/>
+science : {{this.science}} <br/>
+status : {{this.status}} <br/>
+Total : {{this.total}} <br/>
+Avg : {{this.avg}} <br/>
+Grade : {{this.grade}} <br/>
+
+
+
+
+
+
