@@ -6,10 +6,12 @@ import {StringIntropullationComponent} from '../string-intropullation-component/
 import {PropertyBindingComponent} from '../property-binding-component/property-binding-component';
 import {EventBinding} from '../event-binding/event-binding';
 import {TwoWayDatabinding} from '../two-way-databinding/two-way-databinding';
+import {DIRECTIVEDEMO} from '../directive-demo/directive-demo';
+import {ForDemo} from '../for-demo/for-demo';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Component1, Component2, StringIntropullationComponent, PropertyBindingComponent, EventBinding, TwoWayDatabinding],
+  imports: [RouterOutlet, Component1, Component2, StringIntropullationComponent, PropertyBindingComponent, EventBinding, TwoWayDatabinding, DIRECTIVEDEMO, ForDemo],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

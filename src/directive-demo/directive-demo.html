@@ -1,0 +1,34 @@
+<h1> Student Details </h1>
+<ul>
+  <li> Roll No: {{rollno}}</li>
+  <li> Name : {{name}}</li>
+  <li> Maths : {{maths}}</li>
+  <li> Science : {{science}}</li>
+  <li> English : {{english}}</li>
+  <li> Status : @if (maths>35 && science>35 && english>35) {
+      <b style="color: green">Pass</b>
+      <li> Total : {{total}} </li>
+      <li> Avg : {{avg}}</li>
+      <li> Grade : @if(avg>90){A}
+                  @else if (avg>70){B}
+                  @else if (avg>50){C}
+                  @else {D}</li>
+    <li>
+    @switch (this.Grade)
+    {
+      @case ("A"){
+        <b> Your Percentage is above 90</b>
+      }
+      @case("B"){
+        <b> Your Percentage is between 70 to 90</b>
+      }
+    }
+    </li>
+  }
+  @else{
+       <b style="color: red">Fail</b>
+  }
+
+
+  </li>
+</ul>
