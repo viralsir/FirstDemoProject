@@ -8,10 +8,12 @@ import {EventBinding} from '../event-binding/event-binding';
 import {TwoWayDatabinding} from '../two-way-databinding/two-way-databinding';
 import {DIRECTIVEDEMO} from '../directive-demo/directive-demo';
 import {ForDemo} from '../for-demo/for-demo';
+import {TdfDemo} from '../tdf-demo/tdf-demo';
+import {MDFDemo} from '../mdf-demo/mdf-demo';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Component1, Component2, StringIntropullationComponent, PropertyBindingComponent, EventBinding, TwoWayDatabinding, DIRECTIVEDEMO, ForDemo],
+  imports: [RouterOutlet, Component1, Component2, StringIntropullationComponent, PropertyBindingComponent, EventBinding, TwoWayDatabinding, DIRECTIVEDEMO, ForDemo, TdfDemo, MDFDemo],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

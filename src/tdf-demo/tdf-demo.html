@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-4">
+    <form class="formgroup" #Employeeform=ngForm (submit)="save(Employeeform)">
+
+      Employee Id : <input class="form-control" type="number" name="eid" ngModel required> <br/>
+      Employee Name : <input class="form-control" type="text" name="ename" ngModel minlength="4"> <br/>
+      Employee Salary : <input class="form-control" type="number" name="salary" ngModel min="0"> <br/>
+      Employee Department : <input class="form-control" type="text" name="department" ngModel  minlength="2"> <br/>
+
+      <input class="btn btn-primary" type="submit" value="save" [disabled]="Employeeform.invalid">
+      <input class="btn btn-info" type="reset" value="clear">
+    </form>
+  </div>
+
+  <div class="col-8">
+    <table class="table table-success table-striped-columns">
+      <tr> <th>Id</th> <th> Name </th> <th>Salary </th> <th>Department </th></tr>
+      @for (emp of this.EmployeeList; track emp.id)
+      {
+        <tr>
+          <td> {{emp.eid}}</td> <td>{{emp.ename}}</td> <td>{{emp.salary}}</td> <td>{{emp.department}}</td>
+        </tr>
+      }
+    </table>
+  </div>
+
+</div>
+
+<br/>
+<!--Valid : {{ Employeeform.valid}} <br/>-->
+<!--Invalid : {{Employeeform.invalid}} <br/>-->
+<br/>
+

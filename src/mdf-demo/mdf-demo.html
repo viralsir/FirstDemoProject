@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-4">
+    <form class="formgroup" [formGroup]="formgroup" (submit)="save()">
+
+      Employee Id : <input class="form-control" type="number" formControlName="eid"> <br/>
+      Employee Name : <input class="form-control" type="text" formControlName="ename"> <br/>
+      Employee Salary : <input class="form-control" type="number" formControlName="salary"> <br/>
+      Employee Department : <input class="form-control" type="text" formControlName="department"> <br/>
+
+      <input class="btn btn-primary" type="submit" value="save" [disabled]="formgroup.invalid">
+      <input class="btn btn-info" type="reset" value="clear">
+    </form>
+  </div>
+
+  <div class="col-8">
+    <table class="table table-success table-striped-columns">
+      <tr> <th>Id</th> <th> Name </th> <th>Salary </th> <th>Department </th></tr>
+      @for (emp of this.EmployeeList; track emp.id)
+      {
+        <tr>
+          <td> {{emp.eid}}</td> <td>{{emp.ename}}</td> <td>{{emp.salary}}</td> <td>{{emp.department}}</td>
+        </tr>
+      }
+    </table>
+  </div>
+
+</div>
+
+<br/>
+<!--Valid : {{ Employeeform.valid}} <br/>-->
+<!--Invalid : {{Employeeform.invalid}} <br/>-->
+<br/>
+
+
