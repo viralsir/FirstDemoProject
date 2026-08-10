@@ -10,10 +10,12 @@ import {DIRECTIVEDEMO} from '../directive-demo/directive-demo';
 import {ForDemo} from '../for-demo/for-demo';
 import {TdfDemo} from '../tdf-demo/tdf-demo';
 import {MDFDemo} from '../mdf-demo/mdf-demo';
+import {StudentEntry} from '../student-entry/student-entry';
+import {StudentView} from '../student-view/student-view';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Component1, Component2, StringIntropullationComponent, PropertyBindingComponent, EventBinding, TwoWayDatabinding, DIRECTIVEDEMO, ForDemo, TdfDemo, MDFDemo],
+  imports: [RouterOutlet, Component1, Component2, StringIntropullationComponent, PropertyBindingComponent, EventBinding, TwoWayDatabinding, DIRECTIVEDEMO, ForDemo, TdfDemo, MDFDemo, StudentEntry, StudentView],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

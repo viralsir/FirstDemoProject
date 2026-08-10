@@ -1,0 +1,11 @@
+<h1> Student Entry</h1>
+<form [formGroup]="studentformgorup" (submit)="save()">
+  Roll No: <input type="number" formControlName="rollno" ngModel> <br/>
+  Name : <input type="text" formControlName="name" ngModel><br/>
+  Maths : <input type="number" formControlName="maths" ngModel><br/>
+  Science : <input type="number" formControlName="science" ngModel><br/>
+  English : <input type="number" formControlName="english" ngModel> <br/>
+  <input type="submit" value="save" [disabled]="studentformgorup.invalid">
+  <input type="reset" value="clear">
+
+</form>

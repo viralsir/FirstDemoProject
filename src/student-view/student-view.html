@@ -1,0 +1,20 @@
+<h1> Student List - 1 </h1>
+<table>
+  <tr>
+    <th>Roll No</th>
+    <th>Name</th>
+    <th>Maths </th>
+    <th>Science</th>
+    <th>English</th>
+  </tr>
+  @for (student of this.studentservice.studentlist; track student.id)
+  {
+    <tr>
+      <td>{{student.rollno}} </td>
+      <td>{{student.name}}</td>
+      <td>{{student.maths}}</td>
+      <td>{{student.science}}</td>
+      <td>{{student.english}}</td>
+    </tr>
+  }
+</table>
