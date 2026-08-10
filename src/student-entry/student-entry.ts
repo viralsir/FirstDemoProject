@@ -1,6 +1,7 @@
 import {Component, inject} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {StudentService} from '../student-service';
+import {Student} from '../student';
 
 @Component({
   selector: 'app-student-entry',
@@ -25,7 +26,9 @@ export class StudentEntry {
 
   protected save()
   {
-    this.studentservice.addStudent(this.studentformgorup.value);
+    let studentform=this.studentformgorup.value;
+    let student:Student=new Student(studentform.rollno,studentform.name,studentform.maths,studentform.science,studentform.english);
+    this.studentservice.addStudent(student);
     this.studentformgorup.reset();
   }
 

@@ -1,4 +1,4 @@
-<h1> Student List - 1 </h1>
+<h1> Student List </h1>
 <table>
   <tr>
     <th>Roll No</th>
@@ -6,8 +6,10 @@
     <th>Maths </th>
     <th>Science</th>
     <th>English</th>
+    <th>Total</th>
+    <th>Status</th>
   </tr>
-  @for (student of this.studentservice.studentlist; track student.id)
+  @for (student of this.studentservice.studentlist; track student.rollno)
   {
     <tr>
       <td>{{student.rollno}} </td>
@@ -15,6 +17,8 @@
       <td>{{student.maths}}</td>
       <td>{{student.science}}</td>
       <td>{{student.english}}</td>
+      <td>{{student.total()}}</td>
+      <td>{{student.status()}}</td>
     </tr>
   }
 </table>

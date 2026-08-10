@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterOutlet} from '@angular/router';
 import {Component1} from '../component1/component1';
 import {Component2} from '../component2/component2';
 import {StringIntropullationComponent} from '../string-intropullation-component/string-intropullation-component';
@@ -15,7 +15,7 @@ import {StudentView} from '../student-view/student-view';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Component1, Component2, StringIntropullationComponent, PropertyBindingComponent, EventBinding, TwoWayDatabinding, DIRECTIVEDEMO, ForDemo, TdfDemo, MDFDemo, StudentEntry, StudentView],
+  imports: [RouterOutlet, Component1, Component2, StringIntropullationComponent, PropertyBindingComponent, EventBinding, TwoWayDatabinding, DIRECTIVEDEMO, ForDemo, TdfDemo, MDFDemo, StudentEntry, StudentView, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
