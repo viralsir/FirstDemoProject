@@ -1,0 +1,16 @@
+<p>single-demo works!</p>
+<h2> Count Item</h2>
+<h3> Count : {{ count()}}</h3>
+<input type="button" value="Add" (click)="increment()">
+<input type="button" value="clear" (click)="reset()">
+
+<h3>Cart Items </h3>
+<ul>
+  @for (item of this.cartItems(); track item.qty)
+  {
+      <li> {{item.name}} - {{item.qty}} - {{item.price}} - {{item.qty*item.price}}</li>
+  }
+</ul>
+<h3> Total Price : {{totalprice()}}</h3>
+<input type="button" value="AddtoCart" (click)="addToCart()">
+
