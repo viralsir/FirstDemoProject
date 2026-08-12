@@ -5,6 +5,7 @@ import {PostView} from '../post-view/post-view';
 import {BehviourDemo} from '../behviour-demo/behviour-demo';
 import {SingleDemo} from '../single-demo/single-demo';
 import {ToSignalDemo} from '../to-signal-demo/to-signal-demo';
+import {AuthorView} from '../author-view/author-view';
 
 export const routes: Routes = [
   {path:"Entry",component:StudentEntry},
@@ -13,4 +14,5 @@ export const routes: Routes = [
   {path:"behaviour",component:BehviourDemo},
   {path:"signal",component:SingleDemo},
   {path:"ToSignal",component:ToSignalDemo},
+  {path:"AuthorView",component:AuthorView},
 ];
